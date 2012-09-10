@@ -23,6 +23,7 @@ _V_.ControlBar = _V_.Component.extend({
       "remainingTimeDisplay": {},
       "progressControl": {},
       "volumeControl": {},
+			"shareButton": {},
       "muteToggle": {}
     }
   },
@@ -198,6 +199,23 @@ _V_.FullscreenToggle = _V_.Button.extend({
       this.player.cancelFullScreen();
     }
   }
+
+});
+
+/* Share Button
+================================================================================ */
+_V_.ShareButton = _V_.Button.extend({
+
+	buttonText: "Share",
+
+	buildCSSClass: function(){
+		return "vjs-share-control " + this._super();
+	},
+
+	onClick: function(){
+		_V_.log("share this stuff");
+		//this.player.share();
+	}
 
 });
 
